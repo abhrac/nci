@@ -1,6 +1,8 @@
 # Learning Conditional Invariances through Non-Commutativity
 Official implementation of "[Learning Conditional Invariances through Non-Commutativity](https://openreview.net/forum?id=tUVG9nGzgE&noteId=2XWklnrtBv)", ICLR 2024.
 
+The current version provides a non-commutative version of Domain Adversarial Neural Networks. In theory, any invariance learning algorithm that has an associated commutative operator (Definition 2 in the main paper), can be adapted to have an NCI variant.
+
 ## Environment Setup
 
 1. Clone the project repository:
