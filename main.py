@@ -14,6 +14,7 @@ import PIL
 import torch
 import torchvision
 import torch.utils.data
+from tqdm import tqdm
 
 import datasets
 import hparams_registry
@@ -209,7 +210,7 @@ if __name__ == "__main__":
 
 
     last_results_keys = None
-    for step in range(start_step, n_steps):
+    for step in tqdm(range(start_step, n_steps)):
         step_start_time = time.time()
         minibatches_device = [(x.to(device), y.to(device))
             for x,y in next(train_minibatches_iterator)]
