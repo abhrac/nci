@@ -1,158 +1,0 @@
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 104, in <module>
-    dataset = vars(datasets)[args.dataset](args.data_dir,
-  File "/home/achaudhuri/projects/nci/datasets.py", line 167, in __init__
-    super(RotatedMNIST, self).__init__(root, [0, 15, 30, 45, 60, 75],
-  File "/home/achaudhuri/projects/nci/datasets.py", line 96, in __init__
-    raise ValueError('Data directory not specified!')
-ValueError: Data directory not specified!
-  0%|          | 0/9912422 [00:00<?, ?it/s] 16%|#6        | 1605632/9912422 [00:00<00:00, 15889833.59it/s] 95%|#########5| 9437184/9912422 [00:00<00:00, 52452451.50it/s]100%|##########| 9912422/9912422 [00:00<00:00, 47760011.91it/s]
-  0%|          | 0/28881 [00:00<?, ?it/s]100%|##########| 28881/28881 [00:00<00:00, 67977381.49it/s]
-  0%|          | 0/1648877 [00:00<?, ?it/s]100%|##########| 1648877/1648877 [00:00<00:00, 26953922.71it/s]
-  0%|          | 0/4542 [00:00<?, ?it/s]100%|##########| 4542/4542 [00:00<00:00, 26459067.73it/s]
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 104, in <module>
-    dataset = vars(datasets)[args.dataset](args.data_dir,
-  File "/home/achaudhuri/projects/nci/datasets.py", line 167, in __init__
-    super(RotatedMNIST, self).__init__(root, [0, 15, 30, 45, 60, 75],
-  File "/home/achaudhuri/projects/nci/datasets.py", line 117, in __init__
-    self.datasets.append(dataset_transform(images, labels, environments[i]))
-  File "/home/achaudhuri/projects/nci/datasets.py", line 179, in rotate_dataset
-    x[i] = rotation(images[i])
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
-    img = t(img)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/transforms/transforms.py", line 137, in __call__
-    return F.to_tensor(pic)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/transforms/functional.py", line 139, in to_tensor
-    if not (F_pil._is_pil_image(pic) or _is_numpy(pic)):
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/transforms/_functional_pil.py", line 16, in _is_pil_image
-    if accimage is not None:
-KeyboardInterrupt
-  0%|          | 0/9912422 [00:00<?, ?it/s] 58%|#####7    | 5734400/9912422 [00:00<00:00, 57257914.58it/s]100%|##########| 9912422/9912422 [00:00<00:00, 69155118.13it/s]
-  0%|          | 0/28881 [00:00<?, ?it/s]100%|##########| 28881/28881 [00:00<00:00, 65978046.75it/s]
-  0%|          | 0/1648877 [00:00<?, ?it/s]100%|##########| 1648877/1648877 [00:00<00:00, 21443095.21it/s]
-  0%|          | 0/4542 [00:00<?, ?it/s]100%|##########| 4542/4542 [00:00<00:00, 21096931.08it/s]
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 104, in <module>
-    dataset = vars(datasets)[args.dataset](args.data_dir,
-  File "/home/achaudhuri/projects/nci/datasets.py", line 167, in __init__
-    super(RotatedMNIST, self).__init__(root, [0, 15, 30, 45, 60, 75],
-  File "/home/achaudhuri/projects/nci/datasets.py", line 117, in __init__
-    self.datasets.append(dataset_transform(images, labels, environments[i]))
-  File "/home/achaudhuri/projects/nci/datasets.py", line 179, in rotate_dataset
-    x[i] = rotation(images[i])
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
-    img = t(img)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/transforms/transforms.py", line 234, in __call__
-    return F.to_pil_image(pic, self.mode)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/transforms/functional.py", line 259, in to_pil_image
-    _log_api_usage_once(to_pil_image)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/utils.py", line 561, in _log_api_usage_once
-    name = obj.__name__
-KeyboardInterrupt
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 104, in <module>
-    dataset = vars(datasets)[args.dataset](args.data_dir,
-  File "/home/achaudhuri/projects/nci/datasets.py", line 239, in __init__
-    super().__init__(self.dir, test_envs, hparams['data_augmentation'], hparams)
-  File "/home/achaudhuri/projects/nci/datasets.py", line 189, in __init__
-    environments = [f.name for f in os.scandir(root) if f.is_dir()]
-FileNotFoundError: [Errno 2] No such file or directory: '/media/8TB_SSD/achaudhuri/datasets/domainbed/PACS/PACS/'
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 149, in <module>
-    raise ValueError("Not enough unlabeled samples for domain adaptation.")
-ValueError: Not enough unlabeled samples for domain adaptation.
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 179, in <module>
-    algorithm_class = algorithms.get_algorithm_class(args.algorithm)
-  File "/home/achaudhuri/projects/nci/algorithms.py", line 19, in get_algorithm_class
-    raise NotImplementedError("Algorithm not found: {}".format(algorithm_name))
-NotImplementedError: Algorithm not found: nci
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 221, in <module>
-    step_vals = algorithm.update(minibatches_device, uda_device)
-  File "/home/achaudhuri/projects/nci/algorithms.py", line 130, in update
-    features_tgt = self.featurizer(unlabeled[0])
-TypeError: 'NoneType' object is not subscriptable
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 221, in <module>
-    step_vals = algorithm.update(minibatches_device, uda_device)
-  File "/home/achaudhuri/projects/nci/algorithms.py", line 130, in update
-    features_tgt = self.featurizer(unlabeled[0])
-TypeError: 'NoneType' object is not subscriptable
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 238, in <module>
-    acc = misc.accuracy(algorithm, loader, weights, device)
-  File "/home/achaudhuri/projects/nci/lib/misc.py", line 194, in accuracy
-    for x, y in loader:
-  File "/home/achaudhuri/projects/nci/lib/fast_data_loader.py", line 70, in __iter__
-    yield next(self._infinite_iterator)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
-    data = self._next_data()
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
-    idx, data = self._get_data()
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1294, in _get_data
-    success, data = self._try_get_data()
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
-    data = self._data_queue.get(timeout=timeout)
-  File "/home/achaudhuri/anaconda3/lib/python3.9/multiprocessing/queues.py", line 113, in get
-    if not self._poll(timeout):
-  File "/home/achaudhuri/anaconda3/lib/python3.9/multiprocessing/connection.py", line 262, in poll
-    return self._poll(timeout)
-  File "/home/achaudhuri/anaconda3/lib/python3.9/multiprocessing/connection.py", line 429, in _poll
-    r = wait([self], timeout)
-  File "/home/achaudhuri/anaconda3/lib/python3.9/multiprocessing/connection.py", line 936, in wait
-    ready = selector.select(timeout)
-  File "/home/achaudhuri/anaconda3/lib/python3.9/selectors.py", line 416, in select
-    fd_event_list = self._selector.poll(timeout)
-KeyboardInterrupt
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
-Traceback (most recent call last):
-  File "/home/achaudhuri/projects/nci/train.py", line 221, in <module>
-    step_vals = algorithm.update(minibatches_device, uda_device)
-  File "/home/achaudhuri/projects/nci/algorithms.py", line 117, in update
-    all_features = self.featurizer(all_x)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/home/achaudhuri/projects/nci/networks.py", line 104, in forward
-    return self.dropout(self.network(x))
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/resnet.py", line 285, in forward
-    return self._forward_impl(x)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/resnet.py", line 274, in _forward_impl
-    x = self.layer2(x)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/nn/modules/container.py", line 217, in forward
-    input = module(input)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/resnet.py", line 154, in forward
-    out = self.conv3(out)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 463, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-  File "/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
-    return F.conv2d(input, weight, bias, self.stride,
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 588.00 MiB (GPU 0; 23.69 GiB total capacity; 22.42 GiB already allocated; 50.56 MiB free; 22.46 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/home/achaudhuri/venvs/nci/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
-  warnings.warn(msg)
