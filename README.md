@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ```
 3. Run
 ```shell
-python train.py --algorithm=NCI --data_dir=path/to/dataset/root --dataset=PACS --uda_holdout_fraction=0.2 --task=domain_adaptation --batch_size=64
+python main.py --algorithm=NCI --data_dir=path/to/dataset/root --dataset=PACS --uda_holdout_fraction=0.2 --task=domain_adaptation --batch_size=64
 ```
 
 ## Citation
