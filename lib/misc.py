@@ -126,7 +126,7 @@ def print_row(row, colwidth=10, latex=False):
         if np.issubdtype(type(x), np.floating):
             x = "{:.10f}".format(x)
         return str(x).ljust(colwidth)[:colwidth]
-    print(sep.join([format_val(x) for x in row]), end_)
+    print('\n', sep.join([format_val(x) for x in row]), end_)
 
 class _SplitDataset(torch.utils.data.Dataset):
     """Used by split_dataset"""
